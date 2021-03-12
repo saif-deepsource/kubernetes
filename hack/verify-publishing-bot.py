@@ -111,8 +111,7 @@ def main():
                     "Please add %s as dependencies under destination %s in %s" % (gomod_dependencies[rule["destination"]], rule["destination"], rules_file))
             if not found:
                 raise Exception("Please add %s as a dependency under destination %s in %s" % (dep, rule["destination"], rules_file))
-            else:
-                print("  found dependency %s" % dep)
+            print("  found dependency %s" % dep)
         extraDeps = set(processed_deps) - set(gomod_dependencies[rule["destination"]])
         if len(extraDeps) > 0:
             raise Exception("extra dependencies in rules for %s: %s" % (rule["destination"], ','.join(str(s) for s in extraDeps)))
