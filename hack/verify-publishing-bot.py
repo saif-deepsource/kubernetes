@@ -15,11 +15,8 @@
 # limitations under the License.
 
 from __future__ import print_function
-
-import fnmatch
 import os
 import sys
-import json
 
 
 def get_gomod_dependencies(rootdir, components):
